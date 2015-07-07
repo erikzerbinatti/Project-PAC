@@ -18,26 +18,28 @@
  	box-sizing: border-box;
  }
 
- html, textarea, input {
- 	font-size: 14px;
- 	font-family: sans-serif;
- }
+html, textarea, input {
+	font-size: 14px;
+	font-family: sans-serif;
+}
 
- body {
+body {
  	padding: 5px;
  	margin: 0 auto;
  	max-width: 800px;
- }
+}
 
- h1, h2, h3 {
+h1, h2, h3 {
  	border-bottom-color: #B71C1C;
  	border-bottom-style: solid;
  	padding-bottom: 5px;
  	color: #B71C1C;
  }
 
- h1 {
+h1 {
 	border-bottom-width: 4px;
+  height: 90px;
+  padding-top: 30px;
 }
 
 h2 {
@@ -48,8 +50,14 @@ h3 {
 	border-bottom-width: 2px;
 }
 
+.header {
+  position: relative;
+}
+
 .logo {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 a {
