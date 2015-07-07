@@ -48,6 +48,10 @@ h3 {
 	border-bottom-width: 2px;
 }
 
+.logo {
+  float: right;
+}
+
 a {
 	text-decoration: none;
 	color: #E53935;
