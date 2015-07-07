@@ -1,0 +1,15 @@
+<%= form_for(@responsible) do |f| %>
+ 
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_area :email %>
+  </div>
+  <div>
+    <%= f.submit class:"btn btn-add"%>
+    <%= link_to '<< Voltar a lista de projetos', projects_path, class:"btn btn-voltar"%>
+  </div>
+<% end %>

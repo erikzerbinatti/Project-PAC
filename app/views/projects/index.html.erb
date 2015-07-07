@@ -3,15 +3,16 @@
   <%= image_tag 'logo.png', class: "logo" %>
 </div>
 
-
-
 <div class="add"><%= link_to 'Add New Project', new_project_path, class:"btn btn-add" %></div>
+<div class="add"><%= link_to 'Add New Person', new_responsible_path, class:"btn btn-add"%></div>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th>Responsible Name</th>
+      <th>Email</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -20,9 +21,11 @@
       <tr>
         <td class="name"><%= proj.name %></td>
         <td class="description"><%= proj.description %></td>
+        <td></td>
+        <td></td>
         <td class="action">
           <%= link_to 'Edit', edit_project_path(proj), class:"btn"%> | 
-          <%= link_to 'Delete', destroy_project_path(proj), 
+          <%= link_to 'Delete', project_path(proj), 
             class:"btn btn-delete", 
             data:{confirm: 'Are you sure? '}, 
             :method => :delete 
