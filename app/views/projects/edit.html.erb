@@ -1,17 +1,4 @@
 <h1>Editar Projeto</h1>
 
-<%= form_for(@project) do |f| %>
+<%= render 'form' %>
  
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div>
-    <%= f.submit class:"btn btn-add"%>
-    <%= link_to '<< Voltar a lista de projetos', projects_path, class:"btn btn-voltar"%>
-  </div>
-<% end %>
