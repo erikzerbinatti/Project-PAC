@@ -1,4 +1,4 @@
 class Project < ActiveRecord::Base
   validates :name, presence: true
-  has_one :responsible
+  belongs_to :responsible
 end

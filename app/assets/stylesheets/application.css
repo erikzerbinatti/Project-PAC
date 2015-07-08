@@ -133,13 +133,19 @@ div.add {
 }
 
 textarea, 
-input[type = text] {
+input[type = text],
+input[type = email],
+select {
   width: 100%;
   max-width: 100%;
   padding: 5px;
   border-radius: 3px;
   border: 1px solid #aaa;
   margin-bottom: 1em;
+}
+
+input:invalid:not(:focus) {
+	border-color: #a00;
 }
 
 .field label {

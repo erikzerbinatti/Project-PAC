@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
 
   def new 
     @project = Project.new    
+    @responsibles = Responsible.all
   end
 
   def show
@@ -12,7 +13,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    filtered = params.require(:project).permit(:name, :description)
+    filtered = params.require(:project).permit(:name, :description, :responsible_id)
     @project = Project.new(filtered)
 
     if(@project.save)

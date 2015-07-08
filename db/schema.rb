@@ -14,16 +14,16 @@
 ActiveRecord::Schema.define(version: 20150707174452) do
 
   create_table "projects", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
+    t.string  "name"
+    t.string  "description"
+    t.integer "responsible_id"
   end
+
+  add_index "projects", ["responsible_id"], name: "index_projects_on_responsible_id"
 
   create_table "responsibles", force: :cascade do |t|
-    t.string  "name"
-    t.string  "email"
-    t.integer "project_id"
+    t.string "name"
+    t.string "email"
   end
-
-  add_index "responsibles", ["project_id"], name: "index_responsibles_on_project_id"
 
 end

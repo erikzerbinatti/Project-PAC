@@ -21,8 +21,8 @@
       <tr>
         <td class="name"><%= proj.name %></td>
         <td class="description"><%= proj.description %></td>
-        <td></td>
-        <td></td>
+        <td class="responsible-name"><%= proj.responsible.name%></td>
+        <td class="email"><%= proj.responsible.email%></td>
         <td class="action">
           <%= link_to 'Edit', edit_project_path(proj), class:"btn"%> | 
           <%= link_to 'Delete', project_path(proj), 
