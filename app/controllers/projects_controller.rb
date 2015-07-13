@@ -1,11 +1,12 @@
-class ProjectsController < ApplicationController 
+class ProjectsController < ApplicationController
+  before_action(:set_responsibles, only: [:new, :edit])
+
   def index
     @projects = Project.all
   end
 
   def new 
-    @project = Project.new    
-    @responsibles = Responsible.all
+    @project = Project.new
   end
 
   def show
@@ -39,7 +40,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    filtered = params.require(:project).permit(:name, :description, :id)
+    filtered = params.require(:project).permit(:name, :description, :responsible_id)
     @project = Project.find(params[:id])
     @project.update_attributes(filtered)
     if(@project.save)
@@ -49,5 +50,10 @@ class ProjectsController < ApplicationController
       flash[:error] = 'Campo "Name" obrigatório!'
       redirect_to edit_project_path(@project)
     end
+  end
+
+  private
+  def set_responsibles
+    @responsibles = Responsible.all
   end
 end

@@ -10,9 +10,7 @@
   </div>
   <div class="field">
     <%= f.label :responsible_id %><br>
-    <%= 
-      f.collection_select(:responsible_id, @responsibles, :id, :name)
-    %>
+    <%= f.collection_select(:responsible_id, @responsibles, :id, :name) %>
   </div>
   <div>
     <%= f.submit class:"btn btn-add"%>
