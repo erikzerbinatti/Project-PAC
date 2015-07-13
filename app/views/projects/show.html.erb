@@ -3,5 +3,6 @@
 	<p class="desc"><%= @project.description%></p>
 	<p class="description-name"><%= @project.responsible.name%></p>
 	<p class="email"><%= @project.responsible.email%></p>
+  <%= link_to 'Edit', edit_project_path, class:"btn"%>
 	<%= link_to '<< Voltar a lista de projetos', projects_path, class:"btn btn-voltar"%>
 </div>

@@ -1,5 +1,6 @@
 <div id="show">
 	<h2 class="name"><%= @responsible.name%></h2>
 	<p class="desc"><%= @responsible.email%></p>
+  <%= link_to 'Add New Person', new_responsible_path, class:"btn btn-add"%>
 	<%= link_to '<< Voltar a lista de projetos', projects_path, class:"btn btn-voltar"%>
 </div>
